@@ -1,0 +1,47 @@
+# Tipi di dato
+_______________________
+
+# Dipartimenti
+id_dipartimento (INT - AUTO_INCREMENT)
+nome_dipartimento (VARCHAR(50) - NOT NULL)
+telefono (INT)
+
+# Corsi di Laurea
+id_corso_di_laurea (INT - AUTO_INCREMENT)
+nome_corso_di_laurea (VARCHAR(50) - NOT NULL)
+id_dipartimento (INT - AUTO_INCREMENT)
+
+# Corsi
+id_corso (INT - AUTO_INCREMENT)
+nome_corso (VARCHAR(50) - NOT NULL)
+cfu (TINYINT UNSIGNED)
+inizio (DATE)
+fine (DATE)
+id_corso_di_laurea (INT - AUTO_INCREMENT)
+
+# Insegnanti
+id_insegnante (INT - AUTO_INCREMENT)
+nome (VARCHAR(50))
+cognome (VARCHAR(50))
+
+# Corsi e Insegnanti
+id_corso (INT - AUTO_INCREMENT)
+id_insegnante (INT - AUTO_INCREMENT)
+
+# Esami
+id_esame (INT - AUTO_INCREMENT)
+id_corso (INT - AUTO_INCREMENT)
+data (DATE)
+aula (VARCHAR(20))
+
+# Studenti
+id_studente (INT - AUTO_INCREMENT)
+matricola (VARCHAR (20) - NOT NULL)
+nome (VARCHAR(50))
+cognome (VARCHAR(50))
+id_corso_di_laurea (INT - AUTO_INCREMENT)
+
+# Voti
+id_studente (INT - AUTO_INCREMENT)
+id_esame (INT - AUTO_INCREMENT)
+voto (TINYINT UNSIGNED - NOT NULL)
